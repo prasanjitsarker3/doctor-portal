@@ -1,0 +1,28 @@
+import doctor from '../../../assets/images/chair.png'
+import BannerBg from '../../../assets/images/bg.png'
+import { DayPicker } from 'react-day-picker';
+// import { useState } from 'react';
+// import { format } from 'date-fns';
+const AppointmentBanner = ({selectedDate, setSelectedData}) => {
+   
+    return (
+        <div style={{ backgroundImage: `url(${BannerBg})`, backgroundSize: 'cover', backgroundPosition: 'center', width:'100%' }}>
+            <div className="hero py-16">
+                <div className="hero-content flex-col lg:flex-row-reverse justify-between px-12">
+                    <img src={doctor} className="md:w-1/2 rounded-lg shadow-2xl" />
+                    <div className=''>
+                        <DayPicker
+                            mode='single'
+                            selected={selectedDate}
+                            onSelect={setSelectedData}
+                          
+                        />
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default AppointmentBanner;
