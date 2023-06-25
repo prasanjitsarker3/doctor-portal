@@ -11,7 +11,6 @@ const AppointmentOption = ({ option, setTreatMent }) => {
                     <div className="card-actions justify-center">
                         <label disabled={slots.length === 0}
                             htmlFor="booking-modal" onClick={() => setTreatMent(option)} className="btn bg-[#19D3AE] hover:bg-[#34bea3] text-white">Book Appointment</label>
-                        {/* <button className="bg-green-500 text-white py-2 px-4 rounded">Click me</button> */}
                     </div>
                 </div>
             </div>

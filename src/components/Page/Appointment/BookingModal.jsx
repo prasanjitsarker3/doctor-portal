@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 
-const BookingModal = ({ treatMent, selectedDate }) => {
+const BookingModal = ({ treatMent, selectedDate ,setTreatMent}) => {
     const { name, slots } = treatMent;
     const date = format(selectedDate, 'PP')
     const handleBooking = event => {
@@ -10,7 +10,18 @@ const BookingModal = ({ treatMent, selectedDate }) => {
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        console.log(slot, name, email, phone);
+        const booking={
+            appointmentDate: date,
+            treatment: name,
+            patient:name,
+            name,
+            slot,
+            email,
+            phone
+        }
+        console.log(booking);
+        //TODO Post data on server site 
+        setTreatMent(null)
     }
     return (
         <>
