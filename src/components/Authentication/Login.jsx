@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import SocialLogin from "./SociaLogin/SocialLogin";
 
 const Login = () => {
     const { userLogin } = useContext(AuthContext);
@@ -30,7 +31,7 @@ const Login = () => {
 
     return (
         <div className="bg-base-200 p-12">
-
+          
             <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-1/3 mx-auto border shadow-lg">
 
                 <div className="form-control">
@@ -57,8 +58,12 @@ const Login = () => {
                 <p className='text-center'>New here?<Link to='/register' className=' text-blue-500 underline text-center'>Create a New Account</Link></p>
                 <p className="text-center text-green-800">{success}</p>
                 <p className="text-center text-red-700">{error}</p>
-
+                <div className="py-3 text-center">
+                    <SocialLogin></SocialLogin>
+                </div>
+               
             </form>
+
         </div>
     );
 };

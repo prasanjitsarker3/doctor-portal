@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import SocialLogin from "./SociaLogin/SocialLogin";
 
 const Registration = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -66,7 +67,9 @@ const Registration = () => {
                 <p className='text-center'>Already have an account ?<Link to='/login' className=' text-blue-500 underline text-center'>Login ..!</Link></p>
                 <p className="text-center text-green-800">{success}</p>
                 <p className="text-center text-red-700">{error}</p>
-
+                <div className="py-3 text-center">
+                    <SocialLogin></SocialLogin>
+                </div>
             </form>
         </div>
     );
