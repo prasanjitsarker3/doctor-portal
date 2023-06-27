@@ -4,9 +4,9 @@ import Footer from "../HeadAndFooter/Footer";
 
 const Main = () => {
     return (
-        <div>
+        <div> 
             <Header></Header>
-            <Outlet></Outlet>
+            <Outlet></Outlet> 
             <Footer></Footer>
         </div>
     );

@@ -1,7 +1,11 @@
 import { format } from "date-fns";
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/AuthProvider";
+import Swal from "sweetalert2";
 
-const BookingModal = ({ treatMent, selectedDate ,setTreatMent}) => {
-    const { name, slots } = treatMent;
+const BookingModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
+    const { user } = useContext(AuthContext);
+    const { name: treatment, slots } = treatMent;
     const date = format(selectedDate, 'PP')
     const handleBooking = event => {
         event.preventDefault();
@@ -10,18 +14,49 @@ const BookingModal = ({ treatMent, selectedDate ,setTreatMent}) => {
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        const booking={
+        const booking = {
             appointmentDate: date,
-            treatment: name,
-            patient:name,
-            name,
+            treatment: treatment,
+            patient: name,
             slot,
             email,
             phone
         }
         console.log(booking);
         //TODO Post data on server site 
-        setTreatMent(null)
+
+        fetch("http://localhost:5000/booking", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setTreatMent(null)
+                if (data.acknowledged) {
+                    refetch()
+                    Swal.fire({
+                        title: `Appointment Booking  !`,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
+                }
+                else {
+                    // data.acknowledged
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: `${data.message}`,
+
+                    })
+                }
+            })
     }
     return (
         <>
@@ -38,8 +73,8 @@ const BookingModal = ({ treatMent, selectedDate ,setTreatMent}) => {
                                 slots.map((slot, i) => <option value={slot} key={i}>{slot}</option>)
                             }
                         </select>
-                        <input name="name" required type="text" placeholder="Your Name" className="input input-bordered input-info w-full " />
-                        <input name="email" required type="email" placeholder="Your Email" className="input input-bordered input-info w-full my-3" />
+                        <input name="name" required defaultValue={user?.displayName} type="text" placeholder="Your Name" className="input input-bordered input-info w-full " />
+                        <input name="email" required defaultValue={user?.email} disabled type="email" placeholder="Your Email" className="input input-bordered input-info w-full my-3" />
                         <input name="phone" required type="text" placeholder="Phone Number" className="input input-bordered input-info w-full " />
                         <button className="btn bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full mx-auto my-3">Appointment</button>
 

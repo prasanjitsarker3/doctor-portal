@@ -9,7 +9,7 @@ import TimeLocation from "./TimeLocation";
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Banner></Banner> 
             <TimeLocation ></TimeLocation>
             <Service></Service>
             <DentalCare></DentalCare>

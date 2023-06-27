@@ -9,7 +9,7 @@ import PrivateRoute from "../Authentication/PrivateRoute";
 
 const router = createBrowserRouter([
     {
-        path: "",
+        path: "/",
         element: <Main></Main>,
         children: [
             {
