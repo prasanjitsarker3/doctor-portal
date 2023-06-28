@@ -47,7 +47,7 @@ const BookingModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
                         }
                     })
                 }
-                else {
+                else { 
                     // data.acknowledged
                     Swal.fire({
                         icon: 'error',

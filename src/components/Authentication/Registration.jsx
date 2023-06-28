@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-import SocialLogin from "./SociaLogin/SocialLogin";
+import SocialLogin from "./SociaLogin/SocialLogin"; 
 
 const Registration = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);

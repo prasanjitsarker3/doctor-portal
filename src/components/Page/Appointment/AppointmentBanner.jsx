@@ -9,7 +9,7 @@ const AppointmentBanner = ({selectedDate, setSelectedData}) => {
         <div style={{ backgroundImage: `url(${BannerBg})`, backgroundSize: 'cover', backgroundPosition: 'center', width:'100%' }}>
             <div className="hero py-16">
                 <div className="hero-content flex-col lg:flex-row-reverse justify-between px-12">
-                    <img src={doctor} className="md:w-1/2 rounded-lg shadow-2xl" />
+                    <img src='https://img.freepik.com/premium-photo/modern-dental-cabinet_109643-128.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=ais' className="md:w-1/2 rounded-lg shadow-2xl" />
                     <div className=''>
                         <DayPicker
                             mode='single'

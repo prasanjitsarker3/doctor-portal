@@ -16,7 +16,7 @@ const Header = () => {
     }
     const options = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>About</Link></li>
+        <li><Link to='/'>Consultation</Link></li>
         <li><Link to='/appointment'>Appiontment </Link></li>
         {
             user ? <> <li><Link to='/dashboard'>Dashboard</Link></li>
@@ -46,9 +46,9 @@ const Header = () => {
                     {options}
                 </ul>
             </div>
-            <div className="navbar-end md:disabled">
+            {/* <div className="navbar-end md:disabled">
                 <a className="btn">Get started</a>
-            </div>
+            </div> */}
         </div>
     );
 };

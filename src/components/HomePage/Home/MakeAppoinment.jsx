@@ -13,7 +13,7 @@ const MakeAppoinment = () => {
                         <h1 className="text-4xl font-bold text-white ">Make an appointment Today</h1>
                         <p className="py-6 text-white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page</p>
                         {/* <button className="btn btn-primary">Appointment</button> */}
-                        <button className="btn bg-[#19D3AE] hover:bg-[#34bea3] text-white">Appointment</button>
+                        <button className="btn bg-[#19D3AE] hover:bg-[#34bea3]">Appointment</button>
                     </div>
                 </div>
             </div>

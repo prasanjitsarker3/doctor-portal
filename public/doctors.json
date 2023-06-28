@@ -1,0 +1,45 @@
+[
+    {
+        "id": "1",
+        "name": "Dr. John Smith",
+        "specialist": "Dentistry",
+        "rating": 4.7,
+        "photo": "https://img.freepik.com/free-photo/doctors-day-curly-brunette-cute-guy-medical-uniform-confused-with-waving-hands_140725-162760.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+    },
+    {
+        "id": "2",
+        "name": "Dr. Emily Johnson",
+        "specialist": "Orthodontics",
+        "rating": 4.9,
+        "photo": "https://img.freepik.com/premium-photo/portrait-beautiful-nurse_1258-16469.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+
+    },
+    {
+        "id": "3",
+        "name": "Dr. Michael Brown",
+        "specialist": "Endodontics",
+        "rating": 4.5,
+        "photo": "https://img.freepik.com/free-photo/doctors-day-cute-young-handsome-man-lab-coat-glasses-smiling-holding-book_140725-162884.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+    },
+    {
+        "id": "4",
+        "name": "Dr. Sarah Davis",
+        "specialist": "Periodontics",
+        "rating": 4.8,
+        "photo": "https://img.freepik.com/premium-photo/beautiful-doctor-pointing-fingers_1258-16474.jpg?size=626&ext=jpg&ga=GA1.2.2060036261.1681297115&semt=sph"
+    },
+    {
+        "id": "5",
+        "name": "Dr. Robert Wilson",
+        "specialist": "Oral Surgery",
+        "rating": 4.6,
+        "photo": "https://img.freepik.com/free-photo/doctor-standing-with-folder-stethoscope_1291-16.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+    },
+    {
+        "id": "6",
+        "name": "Dr. Jessica Lee",
+        "specialist": "Pediatric Dent",
+        "rating": 4.9,
+        "photo": "https://img.freepik.com/premium-photo/portrait-confident-young-medical-doctor-white-background_168410-2339.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+    }
+]

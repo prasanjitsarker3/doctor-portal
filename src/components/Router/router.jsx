@@ -35,5 +35,5 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     }
 ])
-
+ 
 export default router;

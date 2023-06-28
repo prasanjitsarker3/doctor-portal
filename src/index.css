@@ -15,8 +15,14 @@
     color: #19D3AE; 
 }
 .primary{
-    background-color: #0FCFEC;
+    background-color: #0FCFEC; 
 }
 .secondary{
     background-color: #19D3AE;
+}
+.first{
+    color: #0FCFEC;
+}
+.second{
+    color: #04C8A4;
 }
