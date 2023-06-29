@@ -14,7 +14,7 @@ const Contact = () => {
         setEmail('');
         setSubject('');
         setMessage('');
-        Swal.fire({
+        Swal.fire({ 
             position: 'center',
             icon: 'success',
             title: 'Thank You,For Your Feedback',

@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-import SocialLogin from "./SociaLogin/SocialLogin"; 
+import SocialLogin from "./SociaLogin/SocialLogin";
+import Swal from "sweetalert2";
 
 const Registration = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -16,21 +17,29 @@ const Registration = () => {
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
                 updateUserProfile(data.name)
                     .then(() => {
-                        setError('')
-                        setSuccess("Successfully Login User !")
-                        reset();
-                        navigate(from, { replace: true })
+                        const saveUser = { name: data.name, email: data.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                reset();
+                                navigate('/');
+                                setSuccess("User Login Successfully !")
+                            })
+
                     })
-
-
             })
             .catch(error => {
                 setSuccess('')
                 setError(error.message)
-                console.log(error.message);
+                // console.log(error.message);
             })
     };
     return (

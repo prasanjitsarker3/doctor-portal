@@ -1,4 +1,4 @@
-import doctor from '../../../assets/images/chair.png'
+// import doctor from '../../../assets/images/chair.png'
 import BannerBg from '../../../assets/images/bg.png'
 import { DayPicker } from 'react-day-picker';
 // import { useState } from 'react';

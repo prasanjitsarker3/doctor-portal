@@ -1,4 +1,4 @@
-import treatMentImage from '../../../assets/images/treatment.png'
+// import treatMentImage from '../../../assets/images/treatment.png'
 const DentalCare = () => {
     return (
         <div>

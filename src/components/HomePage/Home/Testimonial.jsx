@@ -8,6 +8,7 @@ import '@smastrom/react-rating/style.css'
 const Testimonial = () => {
     return (
         <div className='my-16'>
+            
             <div className='flex justify-center text-center p-3'>
                 <div>
                     <h1 className='textColor text-2xl'>Testimonial</h1>
