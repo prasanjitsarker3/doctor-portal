@@ -9,9 +9,9 @@ const Registration = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('')
-    const location = useLocation();
+    // const location = useLocation();
     const navigate = useNavigate();
-    const from = location?.state?.from?.pathname || "/";
+    // const from = location?.state?.from?.pathname || "/";
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         createUser(data.email, data.password)
@@ -29,9 +29,19 @@ const Registration = () => {
                         })
                             .then(res => res.json())
                             .then(data => {
-                                reset();
-                                navigate('/');
-                                setSuccess("User Login Successfully !")
+                                if (data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: 'center',
+                                        icon: 'success',
+                                        title: 'User created successfully.',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/')
+                                    setSuccess("User Login Successfully !")
+                                    // navigate(from, { replace: true })
+                                }
                             })
 
                     })
@@ -42,6 +52,16 @@ const Registration = () => {
                 // console.log(error.message);
             })
     };
+    // const getUserToken = email => {
+    //     fetch(`http://localhost:5000/jwt?email=${email}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.accessToken) {
+    //                 localStorage.setItem("accessToken",)
+    //                 navigate('/')
+    //             }
+    //         })
+    // }
     return (
         <div className="bg-base-200 p-12">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-1/3 mx-auto border shadow-lg">

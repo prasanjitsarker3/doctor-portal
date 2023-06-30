@@ -1,8 +1,14 @@
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Footer from '../HeadAndFooter/Footer';
 import Header from '../HeadAndFooter/Header';
+import useAdmin from '../../Customhook/useAdmin';
+import { useContext } from 'react';
+import { AuthContext } from '../Authentication/AuthProvider';
 
 const DashboardLayout = () => {
+    const { user } = useContext(AuthContext)
+    const [isAdmin] = useAdmin(user?.email)
+    // console.log("cheak Admin",isAdmin);
     return (
         <div>
             <Header></Header>
@@ -16,8 +22,16 @@ const DashboardLayout = () => {
                     <label htmlFor="dsahboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 h-full bg-[#19D3AE] hover:bg-[#34bea3] font-bold pt-12 text-white z-90">
                         {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+
+                        {
+                            isAdmin? <>
+                                <li><Link to="/dashboard/dashboardInfo"> Admin Dashboard</Link></li>
+                                <li><Link to="/dashboard/allUser">All User</Link></li>
+                            </> : <>
+                                <li><Link to="/dashboard/myAppointment">My Appointment</Link></li>
+                                <li><Link> User Dashboard</Link></li>
+                            </>
+                        }
                     </ul>
 
                 </div>

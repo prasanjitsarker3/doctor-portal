@@ -9,18 +9,18 @@ const Header = () => {
         userLogOut()
             .then(() => {
 
-            })
+            })   
             .catch(error => {
                 console.log(error);
-            })
-    }
+            }) 
+    } 
     const options = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>Consultation</Link></li>
         <li><Link to='/appointment'>Appiontment </Link></li>
         {
-            user ? <> <li><Link to='/dashboard'>Dashboard</Link></li>
-                <li><Link onClick={handleLogOut}>Logout</Link></li></>
+            user ? <> <li><Link to='/dashboard/dashboardInfo'>Dashboard</Link></li>
+                <li className="lg:tooltip-left" data-tip={user?.displayName}><Link onClick={handleLogOut}>Logout</Link></li></>
                 : <li><Link to='/login'>Login</Link></li>
         }
 
