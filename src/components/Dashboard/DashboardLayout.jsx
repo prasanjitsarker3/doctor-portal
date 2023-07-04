@@ -4,7 +4,7 @@ import Header from '../HeadAndFooter/Header';
 import useAdmin from '../../Customhook/useAdmin';
 import { useContext } from 'react';
 import { AuthContext } from '../Authentication/AuthProvider';
-
+import { FcHome ,FcAddressBook} from "react-icons/fc";
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext)
     const [isAdmin] = useAdmin(user?.email)
@@ -23,13 +23,14 @@ const DashboardLayout = () => {
                     <ul className="menu p-4 h-full bg-[#19D3AE] hover:bg-[#34bea3] font-bold pt-12 text-white z-90">
                         {/* Sidebar content here */}
 
-                        {
+                        { 
                             isAdmin? <>
                                 <li><Link to="/dashboard/dashboardInfo"> Admin Dashboard</Link></li>
                                 <li><Link to="/dashboard/allUser">All User</Link></li>
+                                <li><Link to="/dashboard/addDoctors">Add Doctor</Link></li>
                             </> : <>
-                                <li><Link to="/dashboard/myAppointment">My Appointment</Link></li>
-                                <li><Link> User Dashboard</Link></li>
+                                <li><Link><FcHome></FcHome> User Home</Link></li> 
+                                <li><Link to="/dashboard/myAppointment"><FcAddressBook/>Appointment</Link></li>
                             </>
                         }
                     </ul>

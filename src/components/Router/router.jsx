@@ -10,6 +10,7 @@ import DashboardLayout from "../Dashboard/DashboardLayout";
 import MyAppointment from "../Dashboard/UserDashBoard/MyAppointment";
 import AllUser from "../Dashboard/UserDashBoard/AllUser";
 import Dashboard from "../Dashboard/Dashboard";
+import AddDoctor from "../Dashboard/AdminDashboard/AddDoctor";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Registration></Registration>
-            } 
+            }
         ]
     },
     {
@@ -39,8 +40,12 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
-                path:"dashboardInfo",
-                element:<Dashboard></Dashboard>
+                path: "dashboardInfo",
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path:"addDoctors",
+                element:<AddDoctor></AddDoctor>
             }
             ,
             {
@@ -48,8 +53,8 @@ const router = createBrowserRouter([
                 element: <MyAppointment></MyAppointment>
             },
             {
-                path:"allUser",
-                element: <AllUser></AllUser> 
+                path: "allUser",
+                element: <AllUser></AllUser>
             }
         ]
     }
