@@ -9,7 +9,7 @@ const AllUser = () => {
             method: "PUT"
         })
             .then(res => res.json())
-            .then(data => {
+            .then(data => { 
                 refetch()
                 if (data.modifiedCount > 0) {
                     Swal.fire({
@@ -23,7 +23,7 @@ const AllUser = () => {
                 console.log(data); 
             })
     }
-    const handleDeleteUser = (id) => {
+    const handleDeleteUser = (id) => { 
         fetch(`http://localhost:5000/users/${id}`, {
             method: "DELETE"
         })

@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const BookingModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
     const { user } = useContext(AuthContext);
-    const { name: treatment, slots } = treatMent;
+    const { name: treatment, slots,price} = treatMent;
     const date = format(selectedDate, 'PP')
     const handleBooking = event => {
         event.preventDefault();
@@ -20,7 +20,8 @@ const BookingModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
             patient: name,
             slot,
             email,
-            phone
+            phone,
+            price
         }
         console.log(booking);
         //TODO Post data on server site 

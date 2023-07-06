@@ -7,8 +7,11 @@ import { AuthContext } from '../Authentication/AuthProvider';
 import { FcHome ,FcAddressBook} from "react-icons/fc";
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext)
-    const [isAdmin] = useAdmin(user?.email)
+    const [isAdmin,isLoading] = useAdmin(user?.email)
     // console.log("cheak Admin",isAdmin);
+    if(isLoading){
+        return <span className="flex justify-center py-5 mx-auto loading loading-ring loading-lg"></span>
+    }
     return (
         <div>
             <Header></Header>
@@ -28,8 +31,9 @@ const DashboardLayout = () => {
                                 <li><Link to="/dashboard/dashboardInfo"> Admin Dashboard</Link></li>
                                 <li><Link to="/dashboard/allUser">All User</Link></li>
                                 <li><Link to="/dashboard/addDoctors">Add Doctor</Link></li>
+                                <li><Link to="/dashboard/manageDoctor">Manage Doctor</Link></li>
                             </> : <>
-                                <li><Link><FcHome></FcHome> User Home</Link></li> 
+                                <li><Link  to="/dashboard/dashboardInfo"><FcHome></FcHome> User Home</Link></li> 
                                 <li><Link to="/dashboard/myAppointment"><FcAddressBook/>Appointment</Link></li>
                             </>
                         }
