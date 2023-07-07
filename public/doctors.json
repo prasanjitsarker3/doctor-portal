@@ -1,45 +1,54 @@
 [
     {
-        "id": "1",
         "name": "Dr. John Smith",
         "specialist": "Dentistry",
         "rating": 4.7,
-        "photo": "https://img.freepik.com/free-photo/doctors-day-curly-brunette-cute-guy-medical-uniform-confused-with-waving-hands_140725-162760.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+        "charge":30,
+        "photo": "https://img.freepik.com/free-photo/doctors-day-curly-brunette-cute-guy-medical-uniform-confused-with-waving-hands_140725-162760.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph",
+        "about":"During a dentistry consultation, a dental professional will gather detailed information about your dental and medical history, examine your teeth and gums, and may perform additional diagnostic tests such as X-rays. They will discuss any oral health concerns you have and provide recommendations for treatment or preventive measures to maintain optimal dental health."
     },
     {
-        "id": "2",
+     
         "name": "Dr. Emily Johnson",
         "specialist": "Orthodontics",
         "rating": 4.9,
-        "photo": "https://img.freepik.com/premium-photo/portrait-beautiful-nurse_1258-16469.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+        "charge":30,
+        "photo": "https://img.freepik.com/premium-photo/portrait-beautiful-nurse_1258-16469.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph",
+        "about":"During an orthodontics consultation, a patient can expect to receive a comprehensive evaluation of their dental and facial structure in relation to orthodontic concerns. The orthodontist will assess the alignment of the teeth, the bite, and any jaw abnormalities."
 
     },
     {
-        "id": "3",
+      
         "name": "Dr. Michael Brown",
         "specialist": "Endodontics",
         "rating": 4.5,
+        "charge":30,
         "photo": "https://img.freepik.com/free-photo/doctors-day-cute-young-handsome-man-lab-coat-glasses-smiling-holding-book_140725-162884.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
     },
     {
-        "id": "4",
+     
         "name": "Dr. Sarah Davis",
         "specialist": "Periodontics",
         "rating": 4.8,
-        "photo": "https://img.freepik.com/premium-photo/beautiful-doctor-pointing-fingers_1258-16474.jpg?size=626&ext=jpg&ga=GA1.2.2060036261.1681297115&semt=sph"
+        "charge":30,
+        "photo": "https://img.freepik.com/premium-photo/beautiful-doctor-pointing-fingers_1258-16474.jpg?size=626&ext=jpg&ga=GA1.2.2060036261.1681297115&semt=sph",
+        "about":"During an endodontics consultation, also known as a root canal consultation, a patient can expect to receive an evaluation and diagnosis of their tooth's pulp and surrounding tissues. The endodontist will examine the tooth in question, review any X-rays or imaging, and discuss the patient's symptoms, such as tooth pain, sensitivity, or swelling. They will determine if a root canal treatment is necessary to save the tooth from extraction."
     },
     {
-        "id": "5",
+        
         "name": "Dr. Robert Wilson",
         "specialist": "Oral Surgery",
         "rating": 4.6,
-        "photo": "https://img.freepik.com/free-photo/doctor-standing-with-folder-stethoscope_1291-16.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
-    },
+        "charge":30,
+        "photo": "https://img.freepik.com/free-photo/doctor-standing-with-folder-stethoscope_1291-16.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph",
+        "about":"During an oral surgery consultation, a patient can expect to receive an evaluation and discussion of potential surgical treatment options for various oral and maxillofacial conditions. The oral surgeon will review the patient's medical and dental history and perform a thorough examination of the oral cavity, teeth, jaws, and facial structures."    },
     {
-        "id": "6",
+     
         "name": "Dr. Jessica Lee",
         "specialist": "Pediatric Dent",
         "rating": 4.9,
-        "photo": "https://img.freepik.com/premium-photo/portrait-confident-young-medical-doctor-white-background_168410-2339.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph"
+        "charge":30,
+        "photo": "https://img.freepik.com/premium-photo/portrait-confident-young-medical-doctor-white-background_168410-2339.jpg?size=626&ext=jpg&ga=GA1.1.2060036261.1681297115&semt=sph",
+        "about":"The pediatric dentist will provide oral hygiene instructions tailored to the child's age and developmental abilities. They will discuss proper brushing and flossing techniques, diet and nutrition recommendations for optimal oral health, and habits such as thumb-sucking or pacifier use."
     }
 ]

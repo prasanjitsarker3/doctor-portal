@@ -29,10 +29,10 @@ const Contact = () => {
                 <h2 className='text-2xl text-white'>Stay connected with us</h2>
             </div>
             <div className='flex justify-center items-center '>
-                <form className='flex-col justify-center items-center md:w-1/2 mx-auto'>
+                <form className='flex-col justify-center items-center md:px-1 px-8 w-full md:w-1/2 mx-auto'>
                     <input
                        
-                        defaultValue={email}
+                        defaultValue={email} 
                         type='email'
                         placeholder='Email...'
                         className='input input-bordered w-full mt-3'

@@ -9,15 +9,15 @@ const Header = () => {
         userLogOut()
             .then(() => {
 
-            })   
+            })
             .catch(error => {
                 console.log(error);
-            }) 
-    } 
+            })
+    }
     const options = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>Consultation</Link></li>
         <li><Link to='/appointment'>Appiontment </Link></li>
+        <li><Link to='/consultation'>Consultation</Link></li>
         {
             user ? <> <li><Link to='/dashboard/dashboardInfo'>Dashboard</Link></li>
                 <li className="lg:tooltip-left" data-tip={user?.displayName}><Link onClick={handleLogOut}>Logout</Link></li></>
@@ -46,7 +46,7 @@ const Header = () => {
                     {options}
                 </ul>
             </div>
-            <label  htmlFor="dsahboard-drawer" tabIndex={1} className="navbar-end lg:hidden cursor-pointer pr-3">
+            <label htmlFor="dsahboard-drawer" tabIndex={1} className="navbar-end lg:hidden cursor-pointer pr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
         </div>

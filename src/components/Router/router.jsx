@@ -14,6 +14,7 @@ import AddDoctor from "../Dashboard/AdminDashboard/AddDoctor";
 import ManageDoctor from "../Dashboard/AdminDashboard/ManageDoctor";
 import Payment from "../Dashboard/UserDashBoard/Payment";
 import ErrorPage from "../HeadAndFooter/ErrorPage";
+import Consultation from "../Page/Consultation/Consultation";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: "appointment",
                 element: <Appointment></Appointment>
+            },
+            {
+              path:"consultation",
+              element:<Consultation></Consultation>
             },
             {
                 path: "login",

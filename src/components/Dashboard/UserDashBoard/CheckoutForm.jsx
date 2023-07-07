@@ -47,7 +47,7 @@ const CheckoutForm = ({ bookings }) => {
             {
                 payment_method: {
                     card: card,
-                    billing_details: {
+                    billing_details: { 
                         name: patient,
                         email: email,
 
@@ -114,7 +114,7 @@ const CheckoutForm = ({ bookings }) => {
             {cardError && <p className="text-center text-red-500 text-lg py-3">{cardError}</p>}
             {
                 cardSuccess && <div>
-                    <p className="text-center text-green-500">{cardSuccess}</p>
+                    <p className="text-center text-green-500">{cardSuccess}</p> 
                     <p className="text-center">TransactionId:  <span>{transactionId}</span></p>
                 </div>
             }
