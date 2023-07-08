@@ -17,7 +17,7 @@ const ManagedConsultation = () => {
         .then(res => res.json())
         .then(data=>{
             refetch()
-            console.log(data);
+            console.log(data);  
         })
     }
     return (
@@ -25,7 +25,7 @@ const ManagedConsultation = () => {
             <h1 className="text-center text-2xl textColor">Managed Consultation Information !</h1>
             <div className="overflow-x-auto">
                 <table className="table">
-                    {/* head */}
+                    {/* head */} 
                     <thead>
                         <tr className="text-lg">
                             <th>Index</th>

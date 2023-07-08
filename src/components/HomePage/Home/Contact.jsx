@@ -60,7 +60,7 @@ const Contact = () => {
                     <button
                         onClick={handleSubmitFeedBack}
                         type='submit'
-                        className='btn bg-[#19D3AE] hover:bg-[#34bea3] w-full'
+                        className='btn bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full'
                     >
                         Submit Feedback
                     </button>
