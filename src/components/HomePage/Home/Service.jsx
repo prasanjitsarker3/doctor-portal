@@ -9,21 +9,21 @@ const Service = () => {
                 <h3 className='text-xl '>Services We Provide</h3>
             </div>
             <div className='grid md:grid-cols-3 gap-5 text-center py-5 px-7'>
-                <div className=' shadow-md p-2 py-3'>
+                <div data-aos="zoom-in-right" className=' shadow-md p-2 py-3'>
                     <div className='flex justify-center items-center'>
                         <img src={service1} alt="" className='' />
                     </div>
                     <h2 className='text-lg font-serif font-semibold py-2'>Fluoride Treatment</h2>
                     <p className='p-2 text-base'>A Key Strategy for Optimal Dental Health and Prevention of Tooth Decay</p>
                 </div>
-                <div className=' shadow-md p-2  py-3'>
+                <div data-aos="zoom-in-up" className=' shadow-md p-2  py-3'>
                     <div className='flex justify-center items-center'>
                         <img src={service2} alt="" className='' />
                     </div>
                     <h2 className='text-lg font-serif font-semibold py-2'>Cavity Filling</h2>
                     <p className='p-2 text-base'>The Essential Role of Cavity Filling in Preventing Tooth Decay and Preserving Oral Wellness</p>
                 </div>
-                <div className=' shadow-md p-2 py-3'>
+                <div data-aos="zoom-in-left" className=' shadow-md p-2 py-3'>
                     <div className='flex justify-center items-center'>
                         <img src={service3} alt="" className='' />
                     </div>

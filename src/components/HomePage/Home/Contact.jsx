@@ -3,7 +3,7 @@ import bg from '../../../assets/images/appointment.png';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Authentication/AuthProvider';
 const Contact = () => {
-    const {user}=useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -14,7 +14,7 @@ const Contact = () => {
         setEmail('');
         setSubject('');
         setMessage('');
-        Swal.fire({ 
+        Swal.fire({
             position: 'center',
             icon: 'success',
             title: 'Thank You,For Your Feedback',
@@ -28,11 +28,12 @@ const Contact = () => {
                 <h1 className='textColor text-3xl font-serif py-5'>Contact Us</h1>
                 <h2 className='text-2xl text-white'>Stay connected with us</h2>
             </div>
-            <div className='flex justify-center items-center '>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" className='flex justify-center items-center '>
                 <form className='flex-col justify-center items-center md:px-1 px-8 w-full md:w-1/2 mx-auto'>
                     <input
-                       
-                        defaultValue={email} 
+
+                        defaultValue={email}
                         type='email'
                         placeholder='Email...'
                         className='input input-bordered w-full mt-3'

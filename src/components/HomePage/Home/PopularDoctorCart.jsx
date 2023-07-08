@@ -4,7 +4,7 @@ const PopularDoctorCart = ({ doctor }) => {
     const { id, name, specialist, rating, photo } = doctor;
     return (
         <div className="mx-auto">
-            <div className="card">
+            <div  data-aos="zoom-in" className="card">
                 <figure className="">
                     <img src={photo} alt="Shoes" className="rounded-xl h-[200px]" />
                 </figure>

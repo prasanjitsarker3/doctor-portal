@@ -1,7 +1,12 @@
 import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
 import { FcVideoCall } from "react-icons/fc";
-const ConsultationOption = ({ consultation,setTreatMent }) => {
+import useAdmin from "../../../Customhook/useAdmin";
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/AuthProvider";
+const ConsultationOption = ({ consultation, setTreatMent }) => {
+    const { user } = useContext(AuthContext)
+    const [isAdmin] = useAdmin(user?.email)
     const { name, photo, rating, charge, specialist } = consultation;
     return (
         <div className="grid md:grid-cols-2 gap-5 py-8">
@@ -27,7 +32,11 @@ const ConsultationOption = ({ consultation,setTreatMent }) => {
                     <p className="text-xl py-2">Time : 8.00 Am - 8.00PM</p>
                     <p className="text-xl">Charge:  ${charge}</p>
                     <div className="card-actions md:px-0 px-16 w-full">
-                        <label  htmlFor="booking-modal" onClick={() => setTreatMent(consultation)} className="btn  bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full">Consultation <FcVideoCall></FcVideoCall></label>
+                        {
+                            isAdmin ? <label disabled  htmlFor="booking-modal" onClick={() => setTreatMent(consultation)} className="btn  bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full">Consultation <FcVideoCall></FcVideoCall></label> :
+                                <label htmlFor="booking-modal" onClick={() => setTreatMent(consultation)} className="btn  bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full">Consultation <FcVideoCall></FcVideoCall></label>
+                        }
+
                     </div>
                 </div>
             </div>

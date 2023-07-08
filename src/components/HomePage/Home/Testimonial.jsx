@@ -16,7 +16,7 @@ const Testimonial = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-3 gap-5 md:px-1 px-8 py-12'>
-                <div className='px-8 shadow-md p-3'>
+                <div data-aos="fade-up-right" className='px-8 shadow-md p-3'>
                     <p className='text-center'>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                     <div className='flex justify-between p-3'>
                         <div className="avatar">
@@ -35,7 +35,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                 </div>
-                <div className='px-8 shadow-md p-3'>
+                <div data-aos="zoom-in-down" className='px-8 shadow-md p-3'>
                     <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                     <div className='flex justify-between p-3'>
                         <div className="avatar">
@@ -54,7 +54,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                 </div>
-                <div className='px-8 shadow-md p-3'>
+                <div data-aos="fade-up-left" className='px-8 shadow-md p-3'>
                     <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                     <div className='flex justify-between p-3'>
                         <div className="avatar">
