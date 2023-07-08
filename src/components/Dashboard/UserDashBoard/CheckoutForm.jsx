@@ -52,7 +52,7 @@ const CheckoutForm = ({ bookings }) => {
                         email: email,
 
                     }
-                }
+                } 
             }
         )
         if (confirmError) {

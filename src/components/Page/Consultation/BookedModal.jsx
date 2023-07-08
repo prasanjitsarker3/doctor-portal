@@ -1,24 +1,64 @@
 import { format } from 'date-fns';
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { AuthContext } from '../../Authentication/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
+import Swal from 'sweetalert2';
 
 const BookedModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
     const { user } = useContext(AuthContext);
-    const { name } = treatMent;
+    console.log(treatMent);
+    const { name, charge, specialist } = treatMent;
     const date = format(selectedDate, 'PP')
     const { data: specialties = [] } = useQuery({
         queryKey: ["specialty"],
         queryFn: async () => {
             const res = await fetch("http://localhost:5000/consultationSpecialty")
             const data = await res.json()
-            console.log("Slots data ndede",data[0]);
             return data[0].slots;
         }
 
     })
-    const handleBooking = () => {
 
+    const handleBooking = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const slot = form.slot.value;
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const booking = {
+            appointmentDate: date,
+            treatment: specialist,
+            patient: name,
+            slot,
+            email,
+            phone,
+            price: charge,
+            status:"pending"
+        }
+        fetch("http://localhost:5000/consulBooking", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setTreatMent(null)
+                if (data.acknowledged) {
+                    refetch();
+                    Swal.fire({
+                        title: 'Thank you for yours consultation, Waiting few minute and check your email.',
+                        showClass: {
+                          popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                          popup: 'animate__animated animate__fadeOutUp'
+                        }
+                      })
+                }
+            })
     }
     return (
         <>
@@ -31,10 +71,10 @@ const BookedModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
                         <input name="date" type="text" disabled value={date} className="input input-bordered input-info w-full " />
                         <select name="slot" className="select select-info w-full my-3">
                             {
-                               specialties.map((slot, i) => <option value={slot} key={i}>{slot}</option>)
+                                specialties.map((slot, i) => <option value={slot} key={i}>{slot}</option>)
                             }
                         </select>
-                       
+
                         <input name="name" required defaultValue={user?.displayName} type="text" placeholder="Your Name" className="input input-bordered input-info w-full " />
                         <input name="email" required defaultValue={user?.email} disabled type="email" placeholder="Your Email" className="input input-bordered input-info w-full my-3" />
                         <input name="phone" required type="text" placeholder="Phone Number" className="input input-bordered input-info w-full " />

@@ -77,7 +77,7 @@ const AllUser = () => {
 
                                     {/* <td><button className="btn btn-active btn-primary">Continue</button></td> */}
 
-                                </tr>
+                                </tr>  
                             )
                         }
 

@@ -28,13 +28,15 @@ const DashboardLayout = () => {
 
                         { 
                             isAdmin? <>
-                                <li><Link to="/dashboard/dashboardInfo"> Admin Dashboard</Link></li>
-                                <li><Link to="/dashboard/allUser">All User</Link></li>
-                                <li><Link to="/dashboard/addDoctors">Add Doctor</Link></li>
+                                <li><Link to="/dashboard/dashboardInfo"> Admin Dashboard</Link></li> 
+                                <li><Link to="/dashboard/allUser">All User</Link></li> 
+                                <li><Link to="/dashboard/addDoctors">Add Doctor</Link></li> 
                                 <li><Link to="/dashboard/manageDoctor">Manage Doctor</Link></li>
+                                <li><Link to="/dashboard/manageConsultation">Manage Consultation</Link></li>
                             </> : <>
                                 <li><Link  to="/dashboard/dashboardInfo"><FcHome></FcHome> User Home</Link></li> 
                                 <li><Link to="/dashboard/myAppointment"><FcAddressBook/>Appointment</Link></li>
+                                <li><Link to="/dashboard/userConsultation"><FcAddressBook/>Consultation</Link></li>
                             </>
                         }
                     </ul>
