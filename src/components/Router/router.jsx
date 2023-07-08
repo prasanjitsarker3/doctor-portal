@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        errorElement:<ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
                 element: <Appointment></Appointment>
             },
             {
-              path:"consultation",
-              element:<Consultation></Consultation>
+                path: "consultation",
+                element: <Consultation></Consultation>
             },
             {
                 path: "login",
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
             }
             ,
             {
-                path:"manageConsultation",
-                element:<ManagedConsultation></ManagedConsultation>
+                path: "manageConsultation",
+                element: <ManagedConsultation></ManagedConsultation>
             }
             ,
             {
@@ -79,14 +79,14 @@ const router = createBrowserRouter([
             }
             ,
             {
-                path:"userConsultation",
-                element:<UserConsultation></UserConsultation>
+                path: "userConsultation",
+                element: <UserConsultation></UserConsultation>
             }
             ,
             {
-                path:"/dashboard/payment/:id",
-                element:<Payment></Payment>,
-                loader: ({params}) => fetch(`http://localhost:5000/booking/${params.id}`)
+                path: "/dashboard/payment/:id",
+                element: <Payment></Payment>,
+                loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`)
             }
         ]
     }

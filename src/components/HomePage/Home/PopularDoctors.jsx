@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import PopularDoctorCart from "./PopularDoctorCart";
+import useConsultation from "../../../Customhook/useConsultation";
 
 const PopularDoctors = () => {
-    const [doctors, setDoctors] = useState([])
-    useEffect(() => {
-        fetch("doctors.json")
-            .then(res => res.json())
-            .then(data => setDoctors(data))
-    }, [])
+    // const [doctors, setDoctors] = useState([])
+    const [consultations, isLoading, refetch] = useConsultation();
+    // useEffect(() => {
+    //     fetch("doctors.json")
+    //         .then(res => res.json())
+    //         .then(data => setDoctors(data))
+    // }, [])
     return (
         <div>
             <div className="text-center py-10">
@@ -16,7 +18,7 @@ const PopularDoctors = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-5">
                 {
-                    doctors.map(doctor => <PopularDoctorCart 
+                    consultations.map(doctor => <PopularDoctorCart 
                         key={doctor.id} doctor={doctor}
                     ></PopularDoctorCart>)
                 }

@@ -1,5 +1,6 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { Link } from 'react-router-dom';
 const PopularDoctorCart = ({ doctor }) => {
     const { id, name, specialist, rating, photo } = doctor;
     return (
@@ -15,12 +16,12 @@ const PopularDoctorCart = ({ doctor }) => {
                         <Rating
                             style={{ maxWidth: 120 }}
                             value={rating}
-                            readOnly
+                            readOnly 
                         />
                     </div>
-                    <div className="card-actions w-full">
+                    <Link to="/consultation" className="card-actions w-full">
                         <button className="btn  bg-[#19D3AE] hover:bg-[#34bea3] text-white w-full">Consultation</button>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

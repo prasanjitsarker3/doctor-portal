@@ -7,7 +7,7 @@ const TotalLayout = () => {
             <img className="w-[100px] h-[100px] rounded-full" src="https://t3.ftcdn.net/jpg/00/96/18/08/240_F_96180821_997DBv9Se82I2PrUTFppLlNmqmTjFKKE.jpg" alt="" />
             <div className="text-xl font-sans">
                <h1>180 +</h1>
-               <h1>Expert Doctors</h1>
+               <h1>Expert Doctors</h1>  
             </div>
          </div>
          <div className="flex md:justify-between justify-around items-center">
