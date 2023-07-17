@@ -11,7 +11,7 @@ const CheckoutForm = ({ bookings }) => {
     const [loading, setLoading] = useState(false)
     const { price, patient, email, _id } = bookings;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment', {
+        fetch('https://doctor-portal-server-ten-self.vercel.app/create-payment', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -69,7 +69,7 @@ const CheckoutForm = ({ bookings }) => {
                 bookingId: _id
 
             }
-            fetch("http://localhost:5000/payments", {
+            fetch("https://doctor-portal-server-ten-self.vercel.app/payments", {
                 method: "POST",
                 headers: {
                     'content-type': "application/json"

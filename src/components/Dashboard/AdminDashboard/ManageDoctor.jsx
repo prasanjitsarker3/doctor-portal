@@ -6,7 +6,7 @@ const ManageDoctor = () => {
     const { data: doctors = [], isLoading, refetch } = useQuery({
         queryKey: ["doctors"],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/doctors');
+            const res = await fetch('https://doctor-portal-server-ten-self.vercel.app/doctors');
             const data = await res.json();
             return data;
         }
@@ -25,7 +25,7 @@ const ManageDoctor = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/doctors/${id}`, {
+                fetch(`https://doctor-portal-server-ten-self.vercel.app/doctors/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

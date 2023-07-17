@@ -11,7 +11,7 @@ const ManagedConsultation = () => {
     }
 
     const handleApproved = (id) => {
-        fetch(`http://localhost:5000/consultAllBooking/pending/${id}`, {
+        fetch(`https://doctor-portal-server-ten-self.vercel.app/consultAllBooking/pending/${id}`, {
             method: "PATCH"
         })
         .then(res => res.json())

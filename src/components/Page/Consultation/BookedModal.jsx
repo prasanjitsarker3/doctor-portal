@@ -12,7 +12,7 @@ const BookedModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
     const { data: specialties = [] } = useQuery({
         queryKey: ["specialty"],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/consultationSpecialty")
+            const res = await fetch("https://doctor-portal-server-ten-self.vercel.app/consultationSpecialty")
             const data = await res.json()
             return data[0].slots;
         }
@@ -36,7 +36,7 @@ const BookedModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
             price: charge,
             status:"pending"
         }
-        fetch("http://localhost:5000/consulBooking", {
+        fetch("https://doctor-portal-server-ten-self.vercel.app/consulBooking", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

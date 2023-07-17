@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const useAllUser = () => {
-    const url = 'http://localhost:5000/users'
+    const url = 'https://doctor-portal-server-ten-self.vercel.app/users'
     const { data: allUsers = [], isLoading, refetch } = useQuery({
         queryKey: ["users"],
         queryFn: async () => {

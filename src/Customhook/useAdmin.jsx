@@ -7,7 +7,7 @@ const useAdmin = (email) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/users/admin/${email}`);
+                const response = await fetch(`https://doctor-portal-server-ten-self.vercel.app/users/admin/${email}`);
                 const data = await response.json();
                 setIsAdmin(data.isAdmin);
                 setLoading(false);

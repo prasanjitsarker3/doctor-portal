@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useConsult = () => {
     const { user } = useContext(AuthContext)
-    const url = `http://localhost:5000/consult?email=${user?.email}`
+    const url = `https://doctor-portal-server-ten-self.vercel.app/consult?email=${user?.email}`
     const { data: consultData = [], isLoading, refetch } = useQuery({
         queryKey: ["consult", user?.email],
         queryFn: async () => {

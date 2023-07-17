@@ -1,13 +1,13 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { Link } from 'react-router-dom';
-const PopularDoctorCart = ({ doctor }) => {
+const PopularDoctorCart = ({ doctor }) => { 
     const { id, name, specialist, rating, photo } = doctor;
     return (
         <div className="mx-auto">
             <div  data-aos="zoom-in" className="card">
                 <figure className="">
-                    <img src={photo} alt="Shoes" className="rounded-xl h-[200px]" />
+                    <img src={photo} alt="Shoes" className="rounded-xl h-[200px]" /> 
                 </figure>
                 <div className="card-body items-center ">
                     <h2 className="card-title">{name}</h2>

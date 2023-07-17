@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const AllUser = () => {
     const [allUsers, isLoading, refetch] = useAllUser();
     const handleMakeAdmin = (id) => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://doctor-portal-server-ten-self.vercel.app/users/admin/${id}`, {
             method: "PUT"
         })
             .then(res => res.json())
@@ -24,7 +24,7 @@ const AllUser = () => {
             })
     }
     const handleDeleteUser = (id) => { 
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://doctor-portal-server-ten-self.vercel.app/users/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

@@ -5,7 +5,7 @@ const useConsultation = () => {
     const { data: consultations = [], isLoading, refetch } = useQuery({
         queryKey: ["consultation"],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/consultation");
+            const res = await fetch("https://doctor-portal-server-ten-self.vercel.app/consultation");
             return res.json()
         }
     })

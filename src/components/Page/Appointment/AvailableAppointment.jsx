@@ -9,7 +9,7 @@ const AvailableAppointment = ({ selectedDate }) => {
     const [treatMent, setTreatMent] = useState(null);
     const { data: appointmentOptions = [], refetch, isLoading } = useQuery({
         queryKey: ["appointments", date],
-        queryFn: () => fetch(`http://localhost:5000/appointment?date=${date}`)
+        queryFn: () => fetch(`https://doctor-portal-server-ten-self.vercel.app/appointment?date=${date}`)
             .then(res => res.json())
     })
     if (isLoading) {

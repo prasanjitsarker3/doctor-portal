@@ -26,7 +26,7 @@ const BookingModal = ({ treatMent, selectedDate, setTreatMent, refetch }) => {
         console.log(booking);
         //TODO Post data on server site 
 
-        fetch("http://localhost:5000/booking", {
+        fetch("https://doctor-portal-server-ten-self.vercel.app/booking", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

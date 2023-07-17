@@ -20,7 +20,7 @@ const Registration = () => {
                 updateUserProfile(data.name)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://doctor-portal-server-ten-self.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -53,7 +53,7 @@ const Registration = () => {
             })
     };
     // const getUserToken = email => {
-    //     fetch(`http://localhost:5000/jwt?email=${email}`)
+    //     fetch(`https://doctor-portal-server-ten-self.vercel.app/jwt?email=${email}`)
     //         .then(res => res.json())
     //         .then(data => {
     //             if (data.accessToken) {

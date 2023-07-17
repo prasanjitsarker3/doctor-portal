@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 
 const useAllConsult = () => {
-    const url = 'http://localhost:5000/consultAllBooking'
+    const url = 'https://doctor-portal-server-ten-self.vercel.app/consultAllBooking'
     const { data: consultBookingData = [], isLoading, refetch } = useQuery({
         queryKey: ["consultAllBooking"],
         queryFn: async () => {
